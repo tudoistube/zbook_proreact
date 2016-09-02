@@ -1,0 +1,18 @@
+{
+  "presets": ["react", "es2015"],
+  "env":{
+    "development":{
+      "plugins": [["react-transform", {
+                    "transforms": [{
+                                    "transform": "react-transform-hmr",
+                                    //...리액트 네이티브를 이용할때는
+                                    //..."react-native"를 대신 전달함.
+                                    "imports": ["react"],
+                                    //...웹팩 HMR에 중요한 부분.
+                                    "locals": ["module"]
+                                  }]
+                 //...참고 :  이 밖에도 더 많은 변환을 배열에 추가할 수 있음.
+                 }]]
+    }
+  }
+}
