@@ -1,3 +1,5 @@
+//...46~52p.
+//...npm install --save marked 로 marked 라이브러리 설치할 것.
 import React from 'react';
 import {render} from 'react-dom';
 import KanbanBoard from './KanbanBoard';
@@ -8,7 +10,7 @@ let cardsList = [
     title: "Read the Book",
     description: "I should **repeat** the **whole** book",
     color: "#BD8D31",
-    status: "in-progress",    
+    status: "in-progress",
     tasks: []
   },
   {
