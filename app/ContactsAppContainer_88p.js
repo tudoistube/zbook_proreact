@@ -1,3 +1,6 @@
+//...88p.
+//...ContactsApp_85p 를 복사해서 생성하고 ContactsAppContainer
+//...컴포넌트를 추가함.
 import React, { Component, PropTypes } from 'react';
 import { render } from 'react-dom';
 import 'whatwg-fetch';
@@ -48,13 +51,13 @@ class ContactsApp extends Component {
   render(){
     return (
       <div>
-        {/* 
+        {/*
           SearchBar(자신)는 ContactsApp(남)의 속성을 state 로 받아서
           자신 내부에서는 props 로 처리함.
         */}
-        <SearchBar filterText={this.state.filterText} 
+        <SearchBar filterText={this.state.filterText}
                     onUserInput={this.handleUserInput.bind(this)}/>
-        <ContactList contacts={this.props.contacts} 
+        <ContactList contacts={this.props.contacts}
                      filterText={this.state.filterText}/>
       </div>
     );
@@ -74,7 +77,7 @@ class SearchBar extends Component {
 
 
   render(){
-    return <input type="search" placeholder="search" 
+    return <input type="search" placeholder="search"
                   value={this.props.filterText}
                   onChange={this.handleChange.bind(this)} />;
   }
@@ -126,6 +129,6 @@ ContactItem.propTypes = {
 };
 
 /* contacts 데이터를 contacts.json 파일로 이동함.*/
-
-render(<ContactsAppContainer />, 
+//...이제 ContactsApp 이 아닌 ContactsAppContainer 를 렌더링함.
+render(<ContactsAppContainer />,
        document.getElementById('root'));
