@@ -5,7 +5,8 @@ var webpack = require('webpack');
  */
 var config = {
   devtool: 'eval-source-map',
-  entry:  __dirname + "/app/ContactsApp_79p.js",
+  entry:  __dirname + "/app/ContactsApp_by80p.js",
+  //entry:  __dirname + "/app/App.js",
   output: {
     path: __dirname + "/public",
     filename: "bundle.js"

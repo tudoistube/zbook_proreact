@@ -1,12 +1,7 @@
-//...73p.
 import React, { Component, PropTypes } from 'react';
 import CheckList from './CheckList';
 import marked from 'marked';
 
-/*
-...유효성 검사기는 기본적으로 속성의 리스트, 검사할 속성명, 컴포넌트 이름을 받는 함수임.
-...카드 제목이 20자를 초과할 경우 경고하는 커스텀 유효성 검사기.
-*/
 let ztitlePropType = (props, propName, componentName) => {
   if (props[propName]) {
     let value = props[propName];
@@ -31,7 +26,7 @@ class Card extends Component {
     this.setState(
       {showDetails: !this.state.showDetails}
     );
-  }
+  }  
 
   render() {
     let cardDetails;
@@ -39,11 +34,11 @@ class Card extends Component {
     if(this.state.showDetails){
       cardDetails = (
         <div className="card__details">
-          <span
+          <span 
            dangerouslySetInnerHTML={
             {__html: marked(this.props.description)}
            } />
-
+          
           <CheckList cardId={this.props.id}
                      tasks={this.props.tasks} />
         </div>
@@ -65,7 +60,7 @@ class Card extends Component {
     return (
       <div className="card">
         <div style={sideColor}/>
-        <div className={this.state.showDetails? "card__title card__title--is-open" : "card__title"}
+        <div className={this.state.showDetails? "card__title card__title--is-open" : "card__title"} 
              onClick={this.toggleDetails.bind(this)}>
           {this.props.title}
         </div>
