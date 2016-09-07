@@ -1,0 +1,62 @@
+input {
+  padding: 5px;
+  width: 120px;
+  margin-top:10px;
+}
+
+.item {
+  background-color: #efefef;
+  cursor: pointer;
+  display: block;
+  margin-bottom: 1px;
+  padding: 8px 12px;
+  width: 120px;
+}
+
+/*
+...131p.
+리액트는 상태에 새로운 항목이 추가될 때 마다 zexample-enter 라는 className 을 추가하고
+항목을 렌더링함.
+그리고 곧바로 다음 브라우저 틱에 zexample-enter-active 라는 className 을 추가함.
+CSS 트랜지션의 근본적인 특징 때문에 기본 스타일 속성이 포함된 시작 클래스가 필요하며,
+다른 속성과 트랜지션 룰이 포함된 두번째 클래스를 요소에 추가해야 애니메이션이 트리거됨.
+마지막으로 transitionEnterTimeout 속성에 지정된 시간이 지나면 두 클래스 모두 제거됨.
+translateX 속성에 트랜지션을 적용해서 화면 왼쪽에서 오른쪽으로 나오게 함.
+*/
+
+.zexample-enter {
+  opacity: 0;
+  transform: translateX(-250px);
+}
+.zexample-enter.zexample-enter-active {
+  opacity: 1;
+  transform:   translateX(0);
+  transition: 0.3s;
+}
+
+/*
+...132p. DOM 에서 요소를 제거할 때.
+리액트는 쇼핑 항목을 제거하기 전에 zexample-leave 라는 className 을 추가하고
+zexample-leave-active 를 추가하며 마지막으로 LeaveTimeout 에 지정된 시간이 지나면
+DOM 에서 요소를 제거함.
+*/
+.zexample-leave {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.zexample-leave.zexample-leave-active {
+  opacity: 0;
+  transform: translateX(250px);
+  transition: 0.3s;
+}
+
+.zexample-appear {
+  opacity: 0;
+  transform: translateX(-250px);
+}
+.zexample-appear.zexample-appear-active {
+  opacity: 1;
+  transform:   translateX(0);
+  transition: .3s;
+}

@@ -1,0 +1,58 @@
+<!--126p -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="stylesReactCssTransition.css.css" />
+  <title>TriggerCssTransition</title>
+  <style media="screen">
+  /*...사이드에도 항목 리스트가 포함되므로 여기에도 스타일을 적용함 */
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  li {
+    padding: 15px;
+    border-bottom: solid 1px #eee;
+    background-color: #ddd;
+  }
+  /*...사이드바 기본스타일 */
+  .sidebar {
+    background-color: #eee;
+    box-shadow: 1px 0 3px #888888;
+    position: absolute;
+    width: 15rem;
+    height: 100%;
+  }
+  /*...사이드바 불투명도를 투명(0)하고 위치를 화면 경계를 벗어나게 설정함 */
+  .sidebar-transition {
+    opacity: 0;
+    left: -15rem;
+  }
+  /*...사이드바 불투명도를 불투명(1)하고 위치를 화면 경계 안으로 설정함 */
+  .sidebar-transition-active {
+    opacity: 1;
+    left: 0;
+    transition: 0.5s;
+  }
+
+  </style>
+</head>
+<body>
+  <header>
+    <button onclick="document.querySelector('.sidebar').classList.add('sidebar-transition-active');">
+      &#9776;
+    </button>
+  </header>
+
+  <div class='sidebar sidebar-transition'>
+    <ul>
+      <li>Some Content A </li>
+      <li>Some Content B </li>
+      <li>Some Content C </li>
+      <li>Some Content D </li>
+    </ul>
+  </div>
+
+</body>
+</html>
