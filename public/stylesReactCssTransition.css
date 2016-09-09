@@ -21,6 +21,7 @@ input {
 CSS 트랜지션의 근본적인 특징 때문에 기본 스타일 속성이 포함된 시작 클래스가 필요하며,
 다른 속성과 트랜지션 룰이 포함된 두번째 클래스를 요소에 추가해야 애니메이션이 트리거됨.
 마지막으로 transitionEnterTimeout 속성에 지정된 시간이 지나면 두 클래스 모두 제거됨.
+
 translateX 속성에 트랜지션을 적용해서 화면 왼쪽에서 오른쪽으로 나오게 함.
 */
 
@@ -50,7 +51,7 @@ DOM 에서 요소를 제거함.
   transform: translateX(250px);
   transition: 0.3s;
 }
-
+/*...132p. 초기마운팅시 애니메이션 적용 */
 .zexample-appear {
   opacity: 0;
   transform: translateX(-250px);

@@ -1,5 +1,12 @@
+//...130p.
 import React, { Component } from 'react';
 import { render } from 'react-dom';
+/*...애니메이션을 적용하려는 자식 요소는 ReactCSSTransitionGroup 요소로 래핑해야 함.
+ReactCSSTransitionGroup 은 다음 3개의 속성을 포함함.
+transitionName ( 실제 애니메이션 정의를 포함하는 CSS 클래스 이름으로 매핑됨),
+transitionEnterTimeout,
+transitionLeaveTimeout (밀리초 단위 지속 시간).
+*/
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 
 class AnimatedShoppingList extends Component {
@@ -35,7 +42,7 @@ class AnimatedShoppingList extends Component {
   zhandleRemove(i) {
     // Create a new array without the clicked item
     var znewItems = this.state.items;
-    newItems.splice(i, 1);
+    znewItems.splice(i, 1);
     // Set the new state
     this.setState({items: znewItems});
   }

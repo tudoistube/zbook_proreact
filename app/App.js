@@ -1,7 +1,9 @@
-//...128~135p.
-//...먼저 $ npm install --save react-addons-css-transition-group 설치가 필요함.
+//...130~135p.
 import React, { Component } from 'react';
 import { render } from 'react-dom';
+
+//...먼저 $ npm install --save react-addons-css-transition-group 설치가 필요함.
+//...애니메이션을 적용하려는 자식 요소는 ReactCSSTransitionGroup 요소로 래핑해야 함.
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 
 class AnimatedShoppingList extends Component {
@@ -37,7 +39,6 @@ class AnimatedShoppingList extends Component {
   zhandleRemove(i) {
     // Create a new array without the clicked item
     var znewItems = this.state.items;
-    //debugger;
     znewItems.splice(i, 1);
     // Set the new state
     this.setState({items: znewItems});
@@ -53,20 +54,21 @@ class AnimatedShoppingList extends Component {
 
     return(
       <div>
-        {/*
-          애니메이션을 적용하려는 자식 요소는 ReactCSSTransitionGroup 요소로 래핑해야 함.
-          ReactCSSTransitionGroup 은 transitionName ( 실제 애니메이션 정의를 포함하는 CSS 클래스 이름으로 매핑됨),
-          transitionEnterTimeout, transitionLeaveTimeout (밀리초 단위 지속 시간)의 세 속성을 포함함.
-          //...132p.
-          transitionAppear, transitionAppearTimeout 초기 마운팅시 설정.
-          */}
-        <ReactCSSTransitionGroup transitionName="zexample"
-                                 transitionEnterTimeout={300}
-                                 transitionLeaveTimeout={300}
-                                 transitionAppear={true}
-                                 transitionAppearTimeout={300}>
-              {zshoppingItems}
-        </ReactCSSTransitionGroup>
+      {/*
+        ReactCSSTransitionGroup 은 다음 3개의 속성을 포함함.
+        transitionName ( 실제 애니메이션 정의를 포함하는 CSS 클래스 이름으로 매핑됨),
+        transitionEnterTimeout,
+        transitionLeaveTimeout (밀리초 단위 지속 시간).
+        //...132p.
+        transitionAppear, transitionAppearTimeout 초기 마운팅시 설정.
+        */}
+      <ReactCSSTransitionGroup transitionName="zexample"
+                               transitionEnterTimeout={300}
+                               transitionLeaveTimeout={300}
+                               transitionAppear={true}
+                               transitionAppearTimeout={300}>
+            {zshoppingItems}
+      </ReactCSSTransitionGroup>
         <input type="text" value={this.state.znewItem}
                            onKeyDown={this.zhandleChange.bind(this)}/>
       </div>
