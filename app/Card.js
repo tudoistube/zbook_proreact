@@ -111,7 +111,9 @@ Card.propTypes = {
   tasks: PropTypes.arrayOf(PropTypes.object),
   taskCallbacks: PropTypes.object,
   cardCallbacks: PropTypes.object,
+  //...S.160p.DragSource 로 설정할 Card 컴포넌트 사양에는 beginDrag() 만 구현함.
   connectDragSource: PropTypes.func.isRequired
+  //...E.160p.DragSource 로 설정할 Card 컴포넌트 사양에는 beginDrag() 만 구현함.
 };
 
 //...S.160p.DragSource 로 설정할 Card 컴포넌트 사양에는 beginDrag() 만 구현함.
