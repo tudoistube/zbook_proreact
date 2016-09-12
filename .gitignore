@@ -1,35 +1,10 @@
-#...S.Created by https://www.gitignore.io/api/windows
-### Windows ###
-# Windows image file caches
-Thumbs.db
-ehthumbs.db
+# Logs
+logs
+*.log
 
-# Folder config file
-Desktop.ini
+# Dependency directory
+# https://www.npmjs.org/doc/misc/npm-faq.html#should-i-check-my-node_modules-folder-into-git
+node_modules
 
-# Recycle Bin used on file shares
-$RECYCLE.BIN/
-
-# Windows Installer files
-*.cab
-*.msi
-*.msm
-*.msp
-
-# Windows shortcuts
-*.lnk
-#...E.Created by https://www.gitignore.io/api/windows
-
-
-#...S.Created by JoyWins-----------------------------
-#...npm package folders
-.idea/
-.tmp/
-node_modules/
-npm-debug.log
-*.iml
-bundle.js
-bundle.js.map
-#...E.Created by JoyWins-----------------------------
-
-
+# OS specific
+.DS_Store
