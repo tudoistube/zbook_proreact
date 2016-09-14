@@ -1,18 +1,15 @@
-//...177p.
 import React, { Component } from 'react';
-/*%%%
 import { Link } from 'react-router';
-import 'whatwg-fetch';%%%*/
+import 'whatwg-fetch';
 
 class Repos extends Component {
-/*%%%
   constructor(){
     super(...arguments);
     this.state = {
       repositories: []
     };
   }
-
+  
   componentDidMount(){
     fetch('https://api.github.com/users/pro-react/repos')
     .then((response) => {
@@ -28,25 +25,25 @@ class Repos extends Component {
     .catch((error) => {
       this.props.history.pushState(null,'/error');
     });
-  }%%%*/
+  }
 
   render() {
-    /*%%%let repos = this.state.repositories.map((repo) => (
+    let repos = this.state.repositories.map((repo) => (
       <li key={repo.id}><Link to={"/repo/"+repo.name}>{repo.name}</Link></li>
     ));
 
     let child = this.props.children && React.cloneElement(this.props.children,
       { repositories: this.state.repositories }
-    );%%%*/
+    );
 
     return (
-      //%%%<div>
+      <div>
         <h1>Github Repos</h1>
-        /*%%%<ul>
+        <ul>
           {repos}
         </ul>
         {child}
-      </div>%%%*/
+      </div>
     );
   }
 }
