@@ -1,15 +1,13 @@
 //...187p.
 import React, { Component } from 'react';
 /*
-...특정 리포지토리의 세부사항을 표시할 수 있는 새로운 라우트를 만들고,
-URL 을 /repos/details/repo_name 과 같이 만듦.
-*/
-import 'whatwg-fetch';
-/*
-...특정 리포지토리의 세부사항을 표시할 수 있는 새로운 라우트를 만들고,
-URL 을 /repos/details/repo_name 과 같이 만듦.
+특정 Repository 의 세부 사항을 표시하는 새로운 라우트를 '/repos/details/repo_name' 형태의 URL 로
+만듦.
+Repos 컴포넌트에서 Repository 리스트에 대한 링크를 추가하고 RepoDetails 를 중첩된 자식으로서 로드함.
+라우트를 업데이트하고 RepoDetails 컴포넌트를 생성함.
 */
 import { Link } from 'react-router';
+import 'whatwg-fetch';
 
 class Repos extends Component {
   constructor(){
@@ -21,17 +19,35 @@ class Repos extends Component {
 
   componentDidMount(){
     fetch('https://api.github.com/users/pro-react/repos')
+    /*%%%
+    .then((response) => {
+      if(response.ok){
+        return response.json();
+      } else {
+        throw new Error("Server response wasn't OK");
+      }
+    })%%%*/
     .then((response) => response.json())
     .then((responseData) => {
       this.setState({repositories:responseData});
     });
-  }//...E.componentDidMount()
+    /*%%%
+    .catch((error) => {
+      this.props.history.pushState(null,'/error');
+    });%%%*/
+  }
 
   render() {
     let repos = this.state.repositories.map((repo) => (
-      <Link to={"/repo/"+repo.name}>{repo.name}</Link>
+      <li key={repo.id}>
+        <Link to={"/repos/details/"+repo.name}>{repo.name}</Link>
+      </li>
     ));
 
+    /*%%%
+    let child = this.props.children && React.cloneElement(this.props.children,
+      { repositories: this.state.repositories }
+    );%%%*/
 
     return (
       <div>
