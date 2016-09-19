@@ -1,4 +1,4 @@
-//..406p.
+//..407~410p.
 module.exports = {
 	devtool: 'eval-source-map',
 
@@ -22,6 +22,11 @@ module.exports = {
 				loader: "babel"
 				//...babelrc 파일 사용으로 query 제거하여 웹팩 구성 파일의 단순함 유지함.
 		  },
+/*...408p.스타일시트 로더 설치.
+css-loader 로더 : @import 와 url 문을 찾고 해석함.
+style-loader 로더 : 계산된 모든 스타일 규칙을 페이지로 추가함.
+css-loader, style-loader 로더를 이용해 스타일시트를 웹팩 자바스크립트 번들에 넣을 수 있음.
+*/
 			{
 				test: /\.css$/,
 				//...로더 구성에서 느낌표("!")는 각기 다른 로더를 동일한 파일 형식으로

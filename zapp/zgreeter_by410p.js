@@ -7,7 +7,7 @@ module.exports = function(){
 }
 */
 
-//...405p. 바벨 사용.
+//...405~409p. 바벨 사용.
 import React, {Component} from 'react';
 import config from './zconfig.json';
 

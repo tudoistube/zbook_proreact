@@ -35,7 +35,7 @@ module.exports = {
 	//...Autoprefixer(PostCSS 플러그인)을 설정함.
 	postcss: [
 		require('autoprefixer')
-	]
+	],
 
 	devServer: {
 		//...웹펙개발서버는 기본적으로 프로젝트 루트에 있는 파일을 서비스함.
