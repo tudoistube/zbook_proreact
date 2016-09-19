@@ -1,4 +1,23 @@
 <!DOCTYPE html>
+<!--...416p.기본 제공되지 않는 (타사) 플러그인을 이용하기.
+	npm 을 이용해 설치하고, 웹팩 구성 파일에서 플러그인을 임포트한 후 플러그인 객체의
+	인스턴스를 "plugins" 배열에 추가해야 함.
+
+	html-webpack-plugin 플러그인 : 타사 플러그인 중 가장 유용한 것 중 하나임.
+	웹팩 번들을 모두 포함하는 최종 HTML5 파일을 생성함.
+	이 플러그인은 컴파일할 때 마다 변경되는 해시를 번들 파일 이름에 추가하는 실무용
+	production 빌드에 특히 유용함.
+	프로젝트 구조를 간소화하고 개발자의 시간과 노력을 크게 절감할 수 있음.
+
+  작업>	...\zproreact2_webpack_416p 폴더에서 zpublic 폴더를 삭제함.
+  	HTML5 페이지가 자동으로 생성됨.
+  	CSS 와 웹팩을 번들로 묶으므로 public 폴더 자체도 필요없음.
+
+  작업>	...\zproreact2_webpack_416p\zapp 폴더에서 템플릿 HTML 파일(zindex.template.html)을 생성함.
+  	html-webpack-plugin 은 빌드 프로세스 중 생성되는 HTML 페이지의 기반으로
+  	템플릿 HTML 파일을 이용해서 모든 css, js, manifest, favicon 파일을 자동으로
+  	마크업에 삽입함.
+-->
 <html lang="en">
 <head>
   <meta charset="UTF-8">

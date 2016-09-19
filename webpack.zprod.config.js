@@ -10,6 +10,10 @@ module.exports = {
 	entry: __dirname + "/zapp/zmain.js",
 	output: {
 		path: __dirname + "/build",
+/*...424p.캐싱.
+웹펙은 [name], [id], [hash] 같은 특수한 문자열 조합을 출력 파일 이름 구성에 추가하는 방법으로
+번들 파일의 해시를 파일 이름에 추가할 수 있음.
+*/
 		filename: "[name]-[hash].js"
 	},
 

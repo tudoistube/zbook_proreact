@@ -1,9 +1,13 @@
-//..423p.
+//..423~424p.
 //...원래의 웹팩 개발 구성(webpack.config.js)에서 devtool, devServer, HMR 구성을
 //...제거한 것임.
 
 var zwebpack = require("webpack");
 var ZhtmlWebpackPlugin = require("html-webpack-plugin");
+/*...423p.ExtractTextPlugin : 타사 플로그인.	
+	모든 CSS require/import 를 별도의 CSS 출력 파일로 옮겨서 자바스크립트에서 스타일을
+	인라인으로 포함할 필요가 없게 해줌.
+*/
 var ZextractTextPlugin = require("extract-text-webpack-plugin");
 
 module.exports = {
