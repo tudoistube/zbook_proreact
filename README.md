@@ -1,4 +1,5 @@
-#ProReact.js 책 공부하며 만든 실습예제(by 425p) : Appendix - 플러그인(타사제공), Hot Module Replacement, 실무용 빌드, 최적화 플러그인, 캐싱.
+#ProReact.js 책 공부하며 만든 실습예제(by 425p) : Appendix - 플러그인(타사제공), Hot Module Replacement, 실무용 빌드, 최적화 플러그인, 캐싱.  
+#[React.js Appendix 실습요약](https://docs.google.com/spreadsheets/d/1FCRdK5Vh-X7jHNdGlMxqHbe9A2T5SbjIcGF1DZ6udHw/edit?usp=sharing "React.js Appendix" )  
 ##[gitHub on Pro-React book example, Kanban React.js App](https://github.com/pro-react/kanban-app "pro-react gitHub" )  
 ###[gitHub on Pro-React book example, All Repoistories](https://github.com/pro-react/ "pro-react gitHub" )  
 ###[gitHub on Pro-React book example, react-app-boilerplate](https://github.com/pro-react/react-app-boilerplate "pro-react gitHub" )  
