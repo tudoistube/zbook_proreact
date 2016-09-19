@@ -1,4 +1,4 @@
-//..404~p.
+//..399~400p.
 module.exports = {
 	devtool: 'eval-source-map',
 
@@ -8,37 +8,6 @@ module.exports = {
 		path: __dirname + "/zpublic",
 
 		filename: "bundle.js"
-	},
-
-/*...401p.loader 설치.
-웹팩 로더 설치.
-스트립트와 도구를 통해 소스 파일을 전처리하고 다양한 변경과 변환을 적용할 수 있음.
-JSON 파일을 일반 자바스크립트로 구문 분석하거나
-JSX 등 차세대 자바스크립트 코드를 현재 브라우저가 이해할 수 있는 일반 자바스크립트로 변환함.
-
-별도로 설치한 후, webpack.config.js의 "modules"키에서 구성함.
-
-로더구성 설정 항목.
-	test : 이 로더로 처리하기 위해 일치해야 하는 파일 확장자를 비교하는 정규 표현식(필수).
-	loader : 로더의 이름(필수).
-	include/exclude.
-	query : 로더로 추가 옵션을 전달하는데 이용하는 쿼리 설정.
-*/
-	module: {
-		loaders: [
-		  {
-			test: /\.json$/,
-			loader: "json"
-			},
-			{
-				test: /\.js$/,
-				exclude: /node_modules/,
-				loader: "babel",
-				query: {
-					presets: ['es2015', 'stage-0', 'stage-2', 'react']
-				}
-		  }
-		]
 	},
 
 /*

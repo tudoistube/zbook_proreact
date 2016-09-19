@@ -1,4 +1,4 @@
-//..404~p.
+//..401~403p.
 module.exports = {
 	devtool: 'eval-source-map',
 
@@ -29,14 +29,6 @@ JSX 등 차세대 자바스크립트 코드를 현재 브라우저가 이해할 
 		  {
 			test: /\.json$/,
 			loader: "json"
-			},
-			{
-				test: /\.js$/,
-				exclude: /node_modules/,
-				loader: "babel",
-				query: {
-					presets: ['es2015', 'stage-0', 'stage-2', 'react']
-				}
 		  }
 		]
 	},
