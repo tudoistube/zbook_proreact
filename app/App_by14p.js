@@ -13,9 +13,8 @@ import ReactDOM from 'react-dom'; //...방법2.
 //class HiWorld extends React.Component { //...by12p.ref434p.
 class HiWorld extends Component {
   render() {
-    var myName = "I am JoyWins! Nice to meet you ^ ^";
     return (
-        <h1>Hi, {myName}</h1>
+        <h1>Hi, 2DoIs2Be</h1>
     );
   }
 }
