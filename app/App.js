@@ -8,16 +8,16 @@ let cardsList = [
   {
     id: 1,
     title: "Read the Book",
-    description: "I should **repeat** the **whole** book",
-    color: "#BD8D31",
+    description: "I should **repeat** the **whole** book", //...46p.
+    color: "#BD8D31", //...52p.
     status: "in-progress",
     tasks: []
   },
   {
     id: 2,
     title: "Write some code",
-    description: "**Code along** with the samples in the book",
-    color: "#3A7E28",
+    description: "**Code along** with the samples in the book", //...46p.
+    color: "#3A7E28", //...52p.
     status: "todo",
     tasks: [
       {

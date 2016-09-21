@@ -1,4 +1,4 @@
-//...54~p.
+//...43~53p.
 import React, { Component } from 'react';
 import CheckList from './CheckList';
 import marked from 'marked';
@@ -24,17 +24,18 @@ class Card extends Component {
     if(this.state.showDetails){
       cardDetails = (
         <div className="card__details">
-         {/*XXX {this.props.description} XXX*/}
-         {/*XXX {marked(this.props.description)} XXX*/}
-         {/*dangerouslySetInnerHTML 속성을 사용해서 동적으로 생성한 HTML 을 랜더링함.*/}
-          <span dangerouslySetInnerHTML={
+          {/*dangerouslySetInnerHTML 속성을 사용해서 동적으로 생성한 HTML 을 랜더링함.*/}
+          <span
+           dangerouslySetInnerHTML={
             {__html: marked(this.props.description)}
            } />
+
           <CheckList cardId={this.props.id}
                      tasks={this.props.tasks} />
         </div>
       );
-    }//...E.if(this.state.showDetails)
+    }
+
 
     let sideColor = {
       position: 'absolute',
@@ -45,6 +46,7 @@ class Card extends Component {
       width: 7,
       backgroundColor: this.props.color
     };
+
 
     return (
       <div className="card">
