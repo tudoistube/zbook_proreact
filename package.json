@@ -1,8 +1,8 @@
 {
-  "name": "kanban-app",
+  "name": "zkanban-app",
   "version": "0.1.0",
   "description": "Pro React sample kanban app project",
-  "author": "Cássio Zen",
+  "author": "JoyWins",
   "license": "MIT",
   "scripts": {
     "start": "webpack-dev-server --progress",

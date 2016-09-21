@@ -33,6 +33,13 @@ let cardsList = [
         done: false
       }
     ]
+  },
+  {
+    id: 1,
+    title: "Make KanbanBoard Example",
+    description: "Practise a sample source",
+    status: "done",
+    tasks: []
   }
 ];
 
