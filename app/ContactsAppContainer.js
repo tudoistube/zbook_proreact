@@ -1,10 +1,11 @@
-//...88p.
+//...88~90p.
 //...ContactsApp_85p 를 복사해서 생성하고 ContactsAppContainer
 //...컴포넌트를 추가함.
 import React, { Component, PropTypes } from 'react';
 import { render } from 'react-dom';
 import 'whatwg-fetch';
 
+//...S.컨테이너 컴포넌트 생성.
 class ContactsAppContainer extends Component {
 
   constructor(){
@@ -32,6 +33,7 @@ class ContactsAppContainer extends Component {
   }
 
 }; //...E.class ContactsAppContainer
+//...E.컨테이너 컴포넌트 생성.
 
 //...주 컴포넌트이며 SearchBar와 ContactList를 렌더링함.
 //...filterText 상태와 handleUserInput 콜백을 속성을 통해 전달함.
