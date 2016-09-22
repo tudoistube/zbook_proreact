@@ -1,4 +1,4 @@
-//...73p.
+//...72p.
 import React, { Component, PropTypes } from 'react';
 
 class CheckList extends Component {
@@ -22,10 +22,10 @@ class CheckList extends Component {
     );
   }
 };
-
+//...S.72p.CheckList.propTypes.
 CheckList.propTypes = {
   cardId: PropTypes.number,
   tasks: PropTypes.arrayOf(PropTypes.object)
 };
-
+//...E.72p.CheckList.propTypes.
 export default CheckList;

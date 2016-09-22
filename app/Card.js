@@ -1,22 +1,23 @@
-//...73p.
+//...73~p.
 import React, { Component, PropTypes } from 'react';
 import CheckList from './CheckList';
 import marked from 'marked';
 
-/*
+/*...S.73p.Card 컴포넌트 :: Custom propTypes 유효성 검사기.
 ...유효성 검사기는 기본적으로 속성의 리스트, 검사할 속성명, 컴포넌트 이름을 받는 함수임.
 ...카드 제목이 20자를 초과할 경우 경고하는 커스텀 유효성 검사기.
 */
 let ztitlePropType = (props, propName, componentName) => {
   if (props[propName]) {
     let value = props[propName];
-    if (typeof value !== 'string' || value.length > 80) {
+    if (typeof value !== 'string' || value.length > 20) {
       return new Error(
-        `${propName} in ${componentName} is longer than 10 characters`
+        `${propName} in ${componentName} is longer than 20 characters`
       );
     }
   }
 };
+/*...E.73p.Card 컴포넌트 :: Custom propTypes 유효성 검사기. */
 
 class Card extends Component {
 
@@ -77,7 +78,7 @@ class Card extends Component {
 
 Card.propTypes = {
   id: PropTypes.number,
-  title: ztitlePropType,
+  title: ztitlePropType, //...73p.Custom propTypes 유효성 검사기.
   description: PropTypes.string,
   color: PropTypes.string,
   tasks: PropTypes.arrayOf(PropTypes.object)

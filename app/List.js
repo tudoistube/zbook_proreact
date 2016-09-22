@@ -1,3 +1,4 @@
+//...72p.
 import React, { Component, PropTypes } from 'react';
 import Card from './Card';
 
@@ -22,7 +23,7 @@ class List extends Component {
 };
 
 List.propTypes = {
-  title: PropTypes.string.isRequired, 
+  title: PropTypes.string.isRequired,
   cards: PropTypes.arrayOf(PropTypes.object)
 };
 

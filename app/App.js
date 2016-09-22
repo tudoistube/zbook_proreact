@@ -8,12 +8,12 @@ let cardsList = [
     title: "Read the Book",
     description: "I should **repeat** the **whole** book",
     color: "#BD8D31",
-    status: "in-progress",    
+    status: "in-progress",
     tasks: []
   },
   {
     id: 2,
-    title: "Write some code",
+    title: "Write some code 012345678901234567890",
     description: "**Code along** with the samples in the book",
     color: "#3A7E28",
     status: "todo",
