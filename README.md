@@ -1,4 +1,4 @@
-#ProReact.js 책 공부하며 만든 실습예제(by 61p) 생성자의 상태값으로 값을 표현하고 이벤트를 this 에 바인딩햇해서 값을 변경함.  
+#ProReact.js 책 공부하며 만든 실습예제(by 61p) 생성자의 상태값으로 값을 표현하고 이벤트를 this 에 바인딩해서 값을 변경함.  
 #[React.js 실습요약](https://drive.google.com/open?id=1OMe8x_2lzWWXuATZYFfDYoQO3Px8sPmDxu8BmAES6n8 "React.js Summary by tudoistube@gmail" )  
 ##[gitHub on Pro-React book example, Kanban React.js App](https://github.com/pro-react/kanban-app "pro-react gitHub" )  
 ###[gitHub on Pro-React book example, All Repoistories](https://github.com/pro-react/ "pro-react gitHub" )  
