@@ -15,7 +15,7 @@ class CheckList extends Component {
     return (
       <div className="checklist">
         <ul>{tasks}</ul>
-    {/* 입력상자 : 비제어컴포넌트임*/}
+    {/* 입력상자 : value 속성이 없으므로 입력이 자유로와서 비제어컴포넌트임*/}
         <input type="text" className="checklist--add-task"
                 placeholder="입력상자 : 비제어컴포넌트임" />
       </div>

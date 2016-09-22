@@ -91,6 +91,7 @@ ul {
   content: "✖";
 }
 
+/*...60p.CheckList::input */
 .checklist--add-task{
   border: 1px dashed #bbb;
   width: 100%;
