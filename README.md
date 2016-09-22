@@ -1,4 +1,4 @@
-#ProReact.js 책 공부하며 만든 실습예제(by 73p) propTypes, 속성유효성검사. 상위 컴포넌트의 생성자의 상태값을 하위 컴포넌트는 속성으로 받음.
+#ProReact.js 책 공부하며 만든 실습예제(by 80p) propTypes, 속성유효성검사. 상위 컴포넌트의 생성자의 상태값을 하위 컴포넌트는 속성으로 받음.
 #[React.js 실습요약](https://drive.google.com/open?id=1OMe8x_2lzWWXuATZYFfDYoQO3Px8sPmDxu8BmAES6n8 "React.js Summary by tudoistube@gmail" )  
 ##[gitHub on Pro-React book example, Kanban React.js App](https://github.com/pro-react/kanban-app "pro-react gitHub" )  
 ###[gitHub on Pro-React book example, All Repoistories](https://github.com/pro-react/ "pro-react gitHub" )  
