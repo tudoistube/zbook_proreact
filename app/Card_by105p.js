@@ -1,4 +1,3 @@
-//...105p.
 import React, { Component, PropTypes } from 'react';
 import CheckList from './CheckList';
 import marked from 'marked';
@@ -27,7 +26,7 @@ class Card extends Component {
     this.setState(
       {showDetails: !this.state.showDetails}
     );
-  }
+  }  
 
   render() {
     let cardDetails;
@@ -35,13 +34,13 @@ class Card extends Component {
     if(this.state.showDetails){
       cardDetails = (
         <div className="card__details">
-          <span dangerouslySetInnerHTML={
-            {__html: marked(this.props.description)} } />
-
-          {/*...taskCallbacks 속성을 전달받음. */}
+          <span 
+           dangerouslySetInnerHTML={
+            {__html: marked(this.props.description)}
+           } />
+          
           <CheckList cardId={this.props.id}
-                     tasks={this.props.tasks}
-                     taskCallbacks={this.props.taskCallbacks} />
+                     tasks={this.props.tasks} />
         </div>
       );
     }
@@ -61,7 +60,7 @@ class Card extends Component {
     return (
       <div className="card">
         <div style={sideColor}/>
-        <div className={this.state.showDetails? "card__title card__title--is-open" : "card__title"}
+        <div className={this.state.showDetails? "card__title card__title--is-open" : "card__title"} 
              onClick={this.toggleDetails.bind(this)}>
           {this.props.title}
         </div>
@@ -76,8 +75,7 @@ Card.propTypes = {
   title: ztitlePropType,
   description: PropTypes.string,
   color: PropTypes.string,
-  tasks: PropTypes.arrayOf(PropTypes.object),
-  taskCallbacks: PropTypes.object
+  tasks: PropTypes.arrayOf(PropTypes.object)
 };
 
 export default Card;

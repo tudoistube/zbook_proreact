@@ -20,28 +20,25 @@ class Voucher_91p extends Component {
       	arrival: {
       		airport: 'SIN',
       		time: '2016-08-19T14:00:00.000Z'
-      	},      	
+      	},
       	codeshare:[
       		{company: 'GL', flightNo: '9690'},
       		{company: 'ML', flightNo: '5610'}
       	]
       }
     }
-  } 
+  }
 
   render(){
 
     let updatedPassengers = this.state.passengers.concat('New Passenger C.');
 
-
-    return (
-             this.setState({passengers: updatedPassengers})
-           );
+    return ( this.setState({passengers: updatedPassengers}) );
   }
 
 
 };//...E.class Voucher_91p
 
 
-render(<Voucher_91p />, 
+render(<Voucher_91p />,
        document.getElementById('root'));

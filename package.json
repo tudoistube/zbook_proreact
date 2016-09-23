@@ -1,16 +1,18 @@
 {
-  "name": "kanban-app",
+  "name": "zkanban-app",
   "version": "0.1.0",
   "description": "Pro React sample kanban app project",
-  "author": "Cássio Zen",
+  "author": "JoyWins",
   "license": "MIT",
   "scripts": {
     "start": "webpack-dev-server --progress",
     "build": "NODE_ENV=production webpack -p --progress --colors"
   },
   "dependencies": {
+    "babel-polyfill": "^6.13.0",
     "marked": "^0.3.6",
     "react": "^15.3.0",
+    "react-addons-update": "^15.3.2",
     "react-dom": "^15.3.0",
     "whatwg-fetch": "^1.0.0"
   },
