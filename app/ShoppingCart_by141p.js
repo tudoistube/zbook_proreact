@@ -1,4 +1,4 @@
-//...140p.
+//...141p.
 //...dropTarget 래퍼 없는 기본 구조 + 드래그 앤드 드랍 사양..
 import React, { PropTypes, Component } from 'react';
 import { DropTarget } from 'react-dnd';
@@ -13,7 +13,8 @@ import { DropTarget } from 'react-dnd';
 //    - canDrop: Use it to specify whether the drop target is able to accept
 //               the item.
 const ShoppingCartSpec = {
-    //...drop 이벤트가 발생할 때 마다 문자열 하나를 반환함.
+    //...drop 이벤트가 발생할 때 마다 문자열 하나를 반환하고,
+    //...이를 Snack 컴포넌트가 이용함.
   drop() {
     return { name: 'ShoppingCart' };
   }
