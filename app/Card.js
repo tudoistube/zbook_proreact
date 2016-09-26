@@ -38,7 +38,7 @@ class Card extends Component {
           <span dangerouslySetInnerHTML={
             {__html: marked(this.props.description)} } />
 
-          {/*...taskCallbacks 속성을 전달받음. */}
+          {/*...105p.taskCallbacks 속성을 전달받음. */}
           <CheckList cardId={this.props.id}
                      tasks={this.props.tasks}
                      taskCallbacks={this.props.taskCallbacks} />
@@ -77,7 +77,7 @@ Card.propTypes = {
   description: PropTypes.string,
   color: PropTypes.string,
   tasks: PropTypes.arrayOf(PropTypes.object),
-  taskCallbacks: PropTypes.object
+  taskCallbacks: PropTypes.object //...105p.
 };
 
 export default Card;

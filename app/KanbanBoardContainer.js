@@ -1,5 +1,6 @@
-//...109p.
+//...109~112p.
 import React, { Component } from 'react';
+import update from 'react-addons-update';
 import KanbanBoard from './KanbanBoard';
 //...window.fetch() 이용. $ npm install --save whatwg-fetch 설치 필요.
 import 'whatwg-fetch';
@@ -46,9 +47,9 @@ class KanbanBoardContainer extends Component {
     나중에 서버가 반환한	확정 ID 로 태스크 ID 를 업데이트해야 함.
   	임시 ID 는 밀리초 단위의 현재 시간과 같이 간단한 값을 이용할 수 있음.
   */
-  addTask(cardId, taskName)
-    // Find the index of the card
-    //...카드의 인덱스를 찾음.
+  addTask(cardId, taskName){
+    {/* Find the index of the card
+    ...카드의 인덱스를 찾음.*/}
     let cardIndex = this.state.cards.findIndex((card)=>card.id == cardId);
 
     // Create a new task with the given name and a temporary ID
@@ -111,11 +112,12 @@ class KanbanBoardContainer extends Component {
           headers: API_HEADERS
         });
   }//...E.deleteTask(cardId, taskId, taskIndex)
+
   /*...toggleTask() 메서드 구현하기.
   	배열을 이어붙이는 대신 객체 계층에서 태스크의 done 속성까지 접근한 후
     함수를 이용해 직접 값을 조작함.
   */
-  toggleTask(cardId, taskId, taskIndex)
+  toggleTask(cardId, taskId, taskIndex){
     // Find the index of the card
     //...카드의 인덱스를 찾음.
     let cardIndex = this.state.cards.findIndex((card)=>card.id == cardId);

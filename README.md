@@ -1,4 +1,4 @@
-#ProReact.js 책 공부하며 만든 실습예제(by 111p)   
+#ProReact.js 책 공부하며 만든 실습예제(by 111p) window.fetch() 이용위한 whatwg-fetch 폴리필 사용, 단일객체를 이용한 콜백 사용, 스프레드 연산자 사용, Immutability Help 메서드 이용한 CRUD 메서드 추가.   
 #[React.js 실습요약](https://drive.google.com/open?id=1OMe8x_2lzWWXuATZYFfDYoQO3Px8sPmDxu8BmAES6n8 "React.js Summary by tudoistube@gmail" )  
 ##[gitHub on Pro-React book example, Kanban React.js App](https://github.com/pro-react/kanban-app "pro-react gitHub" )  
 ###[gitHub on Pro-React book example, All Repoistories](https://github.com/pro-react/ "pro-react gitHub" )  

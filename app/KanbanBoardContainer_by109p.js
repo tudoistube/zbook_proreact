@@ -1,4 +1,4 @@
-//...102p.
+//...102~109p.
 import React, { Component } from 'react';
 import KanbanBoard from './KanbanBoard';
 //...window.fetch() 이용. $ npm install --save whatwg-fetch 설치 필요.

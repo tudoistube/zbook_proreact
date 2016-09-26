@@ -1,3 +1,4 @@
+//~103p.
 import React, { Component, PropTypes } from 'react';
 
 class CheckList extends Component {
@@ -14,7 +15,7 @@ class CheckList extends Component {
     return (
       <div className="checklist">
         <ul>{tasks}</ul>
-    {/* 입력상자 : 비제어컴포넌트임*/}        
+    {/* 입력상자 : 비제어컴포넌트임*/}
         <input type="text" className="checklist--add-task"
                 placeholder="입력상자 : 비제어컴포넌트임" />
       </div>

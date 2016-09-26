@@ -1,4 +1,4 @@
-//...105p.
+//...105~106p.
 import React, { Component, PropTypes } from 'react';
 
 class CheckList extends Component {
