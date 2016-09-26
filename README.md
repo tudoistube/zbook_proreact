@@ -1,4 +1,4 @@
-#ProReact.js 책 공부하며 만든 실습예제(by 118p) 낙관적인 UI 업데이트에서 오류시 이전 상태 참조를 이용한 롤백.   
+#ProReact.js 책 공부하며 만든 실습예제(by 135p) ReactCSSTransitionGroup 요소추가로 트랜지션을 이용한 애니메이션 효과.   
 #[React.js 실습요약](https://drive.google.com/open?id=1OMe8x_2lzWWXuATZYFfDYoQO3Px8sPmDxu8BmAES6n8 "React.js Summary by tudoistube@gmail" )  
 ##[gitHub on Pro-React book example, Kanban React.js App](https://github.com/pro-react/kanban-app "pro-react gitHub" )  
 ###[gitHub on Pro-React book example, All Repoistories](https://github.com/pro-react/ "pro-react gitHub" )  
