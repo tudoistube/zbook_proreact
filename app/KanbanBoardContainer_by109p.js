@@ -1,4 +1,4 @@
-//...101~102p.
+//...102~109p.
 import React, { Component } from 'react';
 import KanbanBoard from './KanbanBoard';
 //...window.fetch() 이용. $ npm install --save whatwg-fetch 설치 필요.
@@ -14,9 +14,8 @@ const API_HEADERS = {
    * Change the Authorization to any string you like. It can be your pet's name,
    * your middle name, your favorite animal, your superpower of choice...
    * An unique authorization will allow you to have your own environment for cards and tasks
-   ...로컬서버의 경우 권한 부여가 필요 없음.
    */
-  Authorization: 'JoyWins gets confident about React.Js with this book.'
+  Authorization: 'This book helps me to get confident with React.Js'
 };
 
 class KanbanBoardContainer extends Component {
@@ -39,8 +38,23 @@ class KanbanBoardContainer extends Component {
     });
   }
 
+  addTask(cardId, taskName){}
+  deleteTask(cardId, taskId, taskIndex){}
+  toggleTask(cardId, taskId, taskIndex){}
+
   render() {
-    return <KanbanBoard cards={this.state.cards} />
+    return <KanbanBoard cards={this.state.cards}
+      /*...세함수를 참조하는 단일 객체
+        세 함수는 매개변수로 cardId, taskId, taskIndex 를 받아야 함.
+        세 함수는 컴포넌트의 계층 아래쪽으로 속성을 통해 전달하고,
+        이때 매번 속성을 생성하는 대신 세 함수를 참조하는 단일 객체를 생성해서
+        단일 속성으로 전달하면 코드 작성을 줄일 수 있음.
+      */
+                        taskCallbacks={{
+                            toggle: this.toggleTask.bind(this),
+                            delete: this.deleteTask.bind(this),
+                            add: this.addTask.bind(this)
+                          }} />
   }
 };
 

@@ -1,6 +1,7 @@
-//...99p.
+//...99~101p.
 import React, { Component } from 'react';
 import KanbanBoard from './KanbanBoard';
+
 
 class KanbanBoardContainer extends Component {
   constructor(){
@@ -10,9 +11,9 @@ class KanbanBoardContainer extends Component {
     };
   }
 
-  render() { return (
-    <KanbanBoard cards={this.state.cards} />
-    )
+  render() {
+    return <KanbanBoard cards={this.state.cards} />
   }
-}
+};
+
 export default KanbanBoardContainer;

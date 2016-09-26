@@ -1,19 +1,7 @@
-//...106~108p.
+//...105~106p.
 import React, { Component, PropTypes } from 'react';
 
 class CheckList extends Component {
-
-  /*...태스크 추가 콜백함수 호출하고 입력필드 지움.
-  새 태스크를 추가할 때는 컴포넌트 안에서 taskCallbacks.add 콜백을 호출하기 전에
-  사용자가 Enter 키를 눌렀는지 확인하고 콜백 함수를 호출한 후 입력 필드를 지움.
-  */
-  zcheckInputKeyPress(evt) {
-      if (evt.key === 'Enter') {
-          this.props.taskCallbacks.add(this.props.cardId, evt.target.value);
-          evt.target.value = '';
-      }
-  }
-
   render() {
     let tasks = this.props.tasks.map((task, taskIndex) => (
       <li key={task.id} className="checklist__task">
@@ -44,8 +32,7 @@ class CheckList extends Component {
         <ul>{tasks}</ul>
     {/* 입력상자 : 비제어컴포넌트임*/}
         <input type="text" className="checklist--add-task"
-                placeholder="입력상자 : 비제어컴포넌트임"
-                onKeyPress={this.zcheckInputKeyPress.bind(this)} />
+                placeholder="입력상자 : 비제어컴포넌트임" />
       </div>
     );
   }

@@ -2,6 +2,7 @@
 import React, { Component, PropTypes } from 'react';
 import List from './List';
 
+
 class KanbanBoard extends Component {
   render(){
     return (
@@ -22,6 +23,7 @@ class KanbanBoard extends Component {
     );
   }
 };
+
 KanbanBoard.propTypes = {
   cards: PropTypes.arrayOf(PropTypes.object),
   taskCallbacks: PropTypes.object

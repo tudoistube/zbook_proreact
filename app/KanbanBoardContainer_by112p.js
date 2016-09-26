@@ -1,4 +1,4 @@
-//...109p.
+//...109~112p.
 import React, { Component } from 'react';
 import KanbanBoard from './KanbanBoard';
 import update from 'react-addons-update';

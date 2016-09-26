@@ -1,4 +1,4 @@
-//...105p.
+//~105p.
 import React, { Component, PropTypes } from 'react';
 import CheckList from './CheckList';
 import marked from 'marked';
@@ -35,13 +35,13 @@ class Card extends Component {
     if(this.state.showDetails){
       cardDetails = (
         <div className="card__details">
-          <span dangerouslySetInnerHTML={
-            {__html: marked(this.props.description)} } />
+          <span
+           dangerouslySetInnerHTML={
+            {__html: marked(this.props.description)}
+           } />
 
-          {/*...105p.taskCallbacks 속성을 전달받음. */}
           <CheckList cardId={this.props.id}
-                     tasks={this.props.tasks}
-                     taskCallbacks={this.props.taskCallbacks} />
+                     tasks={this.props.tasks} />
         </div>
       );
     }
@@ -76,8 +76,7 @@ Card.propTypes = {
   title: ztitlePropType,
   description: PropTypes.string,
   color: PropTypes.string,
-  tasks: PropTypes.arrayOf(PropTypes.object),
-  taskCallbacks: PropTypes.object //...105p.
+  tasks: PropTypes.arrayOf(PropTypes.object)
 };
 
 export default Card;
