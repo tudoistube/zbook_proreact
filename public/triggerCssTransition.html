@@ -3,7 +3,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <link rel="stylesheet" href="stylesReactCssTransition.css.css" />
+  <link rel="stylesheet" href="stylesReactCssTransition.css" />
   <title>TriggerCssTransition</title>
   <style media="screen">
   /*...사이드에도 항목 리스트가 포함되므로 여기에도 스타일을 적용함 */
@@ -16,6 +16,7 @@
     border-bottom: solid 1px #eee;
     background-color: #ddd;
   }
+
   /*...사이드바 기본스타일 */
   .sidebar {
     background-color: #eee;
@@ -41,10 +42,12 @@
 <body>
   <header>
     <button onclick="document.querySelector('.sidebar').classList.add('sidebar-transition-active');">
+      <!-- &#9776; 는 ''햄버거 메뉴'에 해당하는 utf-8 기호의 HTML 엔티티임. -->
       &#9776;
     </button>
   </header>
 
+  <!-- 아직 화면에 보이지 않도록 sidebar-transition 로 선언함. -->
   <div class='sidebar sidebar-transition'>
     <ul>
       <li>Some Content A </li>
