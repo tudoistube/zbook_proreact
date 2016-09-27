@@ -33,14 +33,15 @@ let ztitlePropType = (props, propName, componentName) => {
 const cardDragSpec = {
   beginDrag(props) {
     return {
-      id: props.id
+      id: props.id,
+      status: props.status //...172p.새로운 카드 위치와 상태 저장.
     };
   },
   //...S.172p.새로운 카드 위치와 상태 저장.
   endDrag(props) {
     props.cardCallbacks.persistCardDrag(props.id, props.status);
   }
-  //...E.172p.새로운 카드 위치와 상태 저장.  
+  //...E.172p.새로운 카드 위치와 상태 저장.
 }
 let collectDrag = (connect, monitor) => {
   return {

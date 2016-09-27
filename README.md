@@ -1,4 +1,5 @@
-#ProReact.js 책 공부하며 만든 실습예제(by 173p)
+#ProReact.js 책 공부하며 만든 실습예제(by 173p)  Kanban DnD : Drag 를 끝내면 서버를 호출하는 persistCardDrag() 메서드를 추가함.  
+#[React.js 실습요약](https://drive.google.com/open?id=1OMe8x_2lzWWXuATZYFfDYoQO3Px8sPmDxu8BmAES6n8 "React.js Summary by tudoistube@gmail" )  
 ##[gitHub on Pro-React book example, Kanban React.js App](https://github.com/pro-react/kanban-app "pro-react gitHub" )  
 ###[gitHub on Pro-React book example, All Repoistories](https://github.com/pro-react/ "pro-react gitHub" )  
 ###[gitHub on Pro-React book example, react-app-boilerplate](https://github.com/pro-react/react-app-boilerplate "pro-react gitHub" )  
