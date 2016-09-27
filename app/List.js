@@ -9,7 +9,7 @@ import { DropTarget } from 'react-dnd';
 import Card from './Card';
 import constants from './zconstants';
 
-//...S.161p.List 컴포넌트를 DropTarget 으로 설정함.
+//...S.162p.List 컴포넌트를 DropTarget 으로 설정함.
 const listTargetSpec = {
   hover(props, monitor) {
     const draggedId = monitor.getItem().id;
@@ -22,7 +22,7 @@ function collectDrop(connect, monitor) {
     connectDropTarget: connect.dropTarget()
   };
 }
-//...E.161p.List 컴포넌트를 DropTarget 으로 설정함.
+//...E.162p.List 컴포넌트를 DropTarget 으로 설정함.
 
 class List extends Component {
   render() {
@@ -55,7 +55,7 @@ List.propTypes = {
   cards: PropTypes.arrayOf(PropTypes.object),
   taskCallbacks: PropTypes.object,
   cardCallbacks: PropTypes.object,
-  connectDropTarget: PropTypes.func.isRequired
+  connectDropTarget: PropTypes.func.isRequired//...163p.added.
 };
 
 //...S.161p.List 컴포넌트를 DropTarget 으로 설정함.

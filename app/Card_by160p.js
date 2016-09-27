@@ -67,9 +67,11 @@ class Card extends Component {
           } onClick={this.toggleDetails.bind(this)}>
           {this.props.title}
         </div>
+        {/*...transitionEnterTimeout : ztoggle 을 클릭해서 펼때.
+          transitionLeaveTimeout : ztoggle 을 클릭해서 접을때. */}
         <ReactCSSTransitionGroup transitionName="ztoggle"
-                                 transitionEnterTimeout={250}
-                                 transitionLeaveTimeout={250}>
+                                 transitionEnterTimeout={150}
+                                 transitionLeaveTimeout={950}>
                                  {cardDetails}
         </ReactCSSTransitionGroup>
       </div>

@@ -40,7 +40,7 @@ class KanbanBoardContainer extends Component {
     .then((response) => response.json())
     .then((responseData) => {
       this.setState({cards: responseData});
-
+      //...112p.낙관적으로 UI를 변경함.
       window.state = this.state;
     });
 
@@ -91,7 +91,7 @@ class KanbanBoardContainer extends Component {
     .catch((error) => {
       this.setState(prevState);
     });
-  }
+  }//...E.addTask(cardId, taskName)
 
   deleteTask(cardId, taskId, taskIndex){
     // Keep a reference to the original state prior to the mutations
@@ -128,7 +128,7 @@ class KanbanBoardContainer extends Component {
       console.error("Fetch error:",error)
       this.setState(prevState);
     });
-  }
+  }//...E.deleteTask(cardId, taskId, taskIndex)
 
   toggleTask(cardId, taskId, taskIndex){
     // Keep a reference to the original state prior to the mutations
@@ -178,7 +178,7 @@ class KanbanBoardContainer extends Component {
       console.error("Fetch error:",error)
       this.setState(prevState);
     });
-  }
+  }//...E.toggleTask(cardId, taskId, taskIndex)
 
 //...S.156p.카드 드래그 관련 메서드 추가.
   updateCardStatus(cardId, listId) {
@@ -236,9 +236,9 @@ class KanbanBoardContainer extends Component {
 */
                 cardCallbacks={{
                      updateStatus: this.updateCardStatus.bind(this),
-                     updatePosition: this.updateCardPosition.bind(this)}}
+                     updatePosition: this.updateCardPosition.bind(this)}} />
 /*...E.156p.카드 드래그 관련 메서드 추가.*/
-                    />
+                    
     )
   }
 }

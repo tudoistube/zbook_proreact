@@ -99,6 +99,7 @@ ul {
   border-radius: 3px;
 }
 
+/*...155p. max-height 속성에 트랜지션을 적용하는 CSS 스타일 */
 .ztoggle-enter {
   max-height: 0;
   overflow: hidden;

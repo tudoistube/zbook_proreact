@@ -1,4 +1,4 @@
-//...159p.
+//...159~161p.
 /*
 ...cardCallbacks 속성을 받고 Card 로 전달함.
 */
@@ -13,7 +13,7 @@ class List extends Component {
       */
       return <Card key={card.id}
                    taskCallbacks={this.props.taskCallbacks}
-                   cardCallbacks={this.props.cardCallbacks}
+                   cardCallbacks={this.props.cardCallbacks} //...159p.added.
                    {...card} />
     });
 
@@ -29,7 +29,7 @@ List.propTypes = {
   title: PropTypes.string.isRequired,
   cards: PropTypes.arrayOf(PropTypes.object),
   taskCallbacks: PropTypes.object,
-  cardCallbacks: PropTypes.object
+  cardCallbacks: PropTypes.object//...159p.added.
 };
 
 export default List;
