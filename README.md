@@ -1,4 +1,4 @@
-#ProReact.js 책 공부하며 만든 실습예제(~152p) DragAndDrop  
+#ProReact.js 책 공부하며 만든 실습예제(~152p) DragAndDrop=(DragDropContext + DragSource + DropTarget), 사양객체, 콜렉팅함수, export 고차컴포넌트.  
 #[React.js 실습요약](https://drive.google.com/open?id=1OMe8x_2lzWWXuATZYFfDYoQO3Px8sPmDxu8BmAES6n8 "React.js Summary by tudoistube@gmail" )  
 ##[gitHub on Pro-React book example, Kanban React.js App](https://github.com/pro-react/kanban-app "pro-react gitHub" )  
 ###[gitHub on Pro-React book example, All Repoistories](https://github.com/pro-react/ "pro-react gitHub" )  

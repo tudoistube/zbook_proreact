@@ -1,5 +1,5 @@
-//...151~p.
-//...dropSource 래퍼 없는 기본 구조 + 사양객체 + 콜렉팅함수 구현.
+//...151~152p.
+//...drogSource 래퍼 없는 기본 구조 + 사양객체 + 콜렉팅함수 구현.
 //...name 속성을 받고 이를 div 태그 안에 랜더링함.
 import React, { Component, PropTypes } from 'react';
 import { DragSource } from 'react-dnd';

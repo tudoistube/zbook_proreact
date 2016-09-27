@@ -1,4 +1,4 @@
-//...145p.
+//...146~147p.
 //...dropSource 래퍼 없는 기본 구조 + 사양객체.
 //...name 속성을 받고 이를 div 태그 안에 랜더링함.
 import React, { PropTypes, Component } from 'react';

@@ -1,7 +1,9 @@
-//...141~145p.
-//...dropTarget 래퍼 없는 기본 구조 + DnD사양객체 + 콜렉트함수(connector + monitor).
+//...151~p.
+//...dropTarget 래퍼 없는 기본 구조 + DnD사양객체 + 콜렉트함수.
 import React, { PropTypes, Component } from 'react';
 import { DropTarget } from 'react-dnd';
+
+import zconstants from './zconstants';
 
 // ShoppingCart DND Spec :: 드래그 앤드 드랍 사양.
 //...드랍대상 사양을 구현하고 메서드를 설정함.
@@ -102,4 +104,4 @@ ShoppingCart.propTypes = {
 DropTarget 고차 래퍼의 타입 매개변수는 이 컴포넌트로 드래그할 수 있는 드래그 원본의
 타입(이 예제에서는 'snack')을 지정함.
 */
-export default DropTarget("snack", ShoppingCartSpec, collect)(ShoppingCart);
+export default DropTarget(zconstants.SNACK, ShoppingCartSpec, collect)(ShoppingCart);
