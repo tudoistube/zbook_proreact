@@ -13,7 +13,7 @@ import 'whatwg-fetch';
 import 'babel-polyfill'; //...바벨 폴리필.
 
 import KanbanBoard from './KanbanBoard';
-import {throttle} from './zutils';
+import {throttle} from './zutils';//...167p.added.
 
 
 const API_URL = 'http://kanbanapi.pro-react.com';

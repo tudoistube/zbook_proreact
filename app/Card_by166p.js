@@ -148,7 +148,7 @@ Card.propTypes = {
 };
 
 //...S.164p.Card 컴포넌트를 DragSource 와 DropTarget 으로 모두 설정함.
-const dragSortCard = DragSource(constants.CARD, cardDragSpec, collectDrag)(Card);
-const dragDropSortCard = DropTarget(constants.CARD, cardDropSpec, collectDrop)(dragSortCard);
+const dragSourceCard = DragSource(constants.CARD, cardDragSpec, collectDrag)(Card);
+const dragDropSortCard = DropTarget(constants.CARD, cardDropSpec, collectDrop)(dragSourceCard);
 export default dragDropSortCard;
 //...E.164p.Card 컴포넌트를 DragSource 와 DropTarget 으로 모두 설정함.

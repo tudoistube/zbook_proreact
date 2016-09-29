@@ -28,6 +28,7 @@ export const throttle = (func, wait) => {
     args = arguments;
     argsChanged = JSON.stringify(args) != JSON.stringify(prevArgs);
     //prevArgs = {...args}; //...167p. 책에는 이렇게 되어 있으나 오류가 발생함.
+    //prevArgs = args; //...Okay, it worked.
     prevArgs = Object.assign({}, args);
 
     if (argsChanged || wait && (remaining <= 0 || remaining > wait)) {
