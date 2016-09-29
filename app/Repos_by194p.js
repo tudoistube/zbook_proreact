@@ -1,4 +1,4 @@
-//...187p.
+//...187~194p.
 import React, { Component } from 'react';
 /*
 특정 Repository 의 세부 사항을 표시하는 새로운 라우트를 '/repos/details/repo_name' 형태의 URL 로

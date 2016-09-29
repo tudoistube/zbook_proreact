@@ -1,4 +1,10 @@
 //...194p.
+/*
+...194p.RepoDetails 컴포넌트는 순수 컴포넌트로 취급되어 내부 상태를 갖지 않고 속성을 받고
+표시하기만 함.
+constructor, componentDidMount, componentWillReceiveProps, fetchData() 는 제거함.
+URL 매개변수를 기준으로 Repository 를 찾도록 render() 메서드를 수정함.
+*/
 import React, { Component } from 'react';
 /*
 ...195p.Array.prototype.find() 는 이전 브라우저에서 지원되지 않으므로
