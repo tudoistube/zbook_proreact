@@ -39,7 +39,7 @@ class App extends Component {
 
   render() {
     var Child;
-    //...176p.root 를 기준으로 해당 컴포넌트를 렌더링함.
+    //...176p.현재 route 를 기준으로 해당 컴포넌트를 렌더링함.
     switch (this.state.route) {
       case '/about': Child = About; break;
       case '/repos': Child = Repos; break;
@@ -53,11 +53,12 @@ class App extends Component {
           <ul>
             {/*%%%<li><Link to="/about">About</Link></li>
             <li><Link to="/repos">Repos</Link></li>%%%*/}
-            <li><a href="./about">About</a></li>
-            <li><a href="./repos">Repos</a></li>
+            <li><a href="#/about">About</a></li>
+            <li><a href="#/repos">Repos</a></li>
           </ul>
         </menu>
         {/*%%%{this.props.children}%%%*/}
+        <Child />
       </div>
     );
   }
