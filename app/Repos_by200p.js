@@ -1,4 +1,4 @@
-//...197p.
+//...197~200p.
 import React, { Component } from 'react';
 import { Link } from 'react-router';
 import 'whatwg-fetch';
@@ -43,9 +43,11 @@ class Repos extends Component {
       </li>
     ));
 
-    let child = this.props.children && React.cloneElement(this.props.children,
-      { repositories: this.state.repositories }
-    );
+    let child = this.props.children
+                &&
+                React.cloneElement(this.props.children,
+                  { repositories: this.state.repositories }
+                );
 
     return (
       <div>
