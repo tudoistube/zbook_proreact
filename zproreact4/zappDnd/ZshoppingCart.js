@@ -116,8 +116,8 @@ class ShoppingCart extends Component{
     return connectDropTarget(
       <div className='shopping-cart' style={style}>
         {isActive ?
-          snackNameInSpec :
-          'Drag here to order!'
+          'Drop here to order!':
+          snackNameInSpec
         }
       </div>
     );
