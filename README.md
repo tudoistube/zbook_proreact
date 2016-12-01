@@ -1,4 +1,4 @@
-#ProReact.js 책 공부하며 만든 실습예제(by 203p) : Ch05. Routing : React.cloneElement(), babel-polyfill, Route path 와 Link to 속성, history객체의 탐색메서드, Router history={createBrowserHistory()}.  
+#ProReact.js 책 실습중 의문사항  해결을 위해 만든 리포지터리 : Repository which has questions to be solved.  
 #[React.js 실습요약](https://drive.google.com/open?id=1OMe8x_2lzWWXuATZYFfDYoQO3Px8sPmDxu8BmAES6n8 "React.js Summary by tudoistube@gmail" )  
 ##[gitHub on Pro-React book example, Kanban React.js App](https://github.com/pro-react/kanban-app "pro-react gitHub" )  
 ###[gitHub on Pro-React book example, All Repoistories](https://github.com/pro-react/ "pro-react gitHub" )  
