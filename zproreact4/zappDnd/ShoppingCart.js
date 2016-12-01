@@ -5,6 +5,7 @@ import React, { PropTypes, Component } from 'react';
 import { DropTarget } from 'react-dnd';
 
 import zconstants from './zconstants';
+
 // ShoppingCart DND Spec :: 드래그 앤드 드랍 사양.
 //...드랍대상 사양을 구현하고 메서드를 설정함.
 //    "A plain object implementing the drop target specification"

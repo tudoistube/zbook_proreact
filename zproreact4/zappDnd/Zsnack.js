@@ -4,6 +4,8 @@
 import React, { PropTypes, Component } from 'react';
 import { DragSource } from 'react-dnd';
 
+import zconstants from './zconstants';
+
 //  snack Drag'nDrop spec :: 사양객체.
 //...이벤트 구현.
 //    - Required: beginDrag 이벤트 발생시 문자열 하나 반환함.
@@ -74,4 +76,5 @@ Snack.propTypes = {
 };
 
 //...고차컴포넌트를 DragSource 래퍼를 이용해 내보내야 함.
-export default DragSource('snack', snackSpec, collect)(Snack);
+//export default DragSource('snack', snackSpec, collect)(Snack);
+export default DragSource(zconstants.SNACK, snackSpec, collect)(Snack);

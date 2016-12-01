@@ -4,8 +4,8 @@
 import React, { Component } from 'react';
 import {render} from 'react-dom';
 
-import Container from './Container';
-//import Container from './ZdnDContainer';
+//import Container from './Container';
+import Container from './ZdnDContainer';
 
 class App extends Component{
   render(){
