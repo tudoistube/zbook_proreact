@@ -1,7 +1,28 @@
 import React, { Component, PropTypes } from 'react';
-
+import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 import CheckList from './CheckList';
 import marked from 'marked';
+
+
+/*.XXX.
+...DragSource 로 설정할 Card 컴포넌트 사양에는 beginDrag() 만 구현함.
+카드를 다른 리스트 위로 드래그하는 동안 리스트를 바꾸므로 endDrag() 는 구현하지 않음.
+import { DragSource } from 'react-dnd';
+...before/after: 164p.Card 컴포넌트를 DragSource 와 DropTarget 으로 모두 설정함.
+카드 정렬.
+리액트 DnD 를 이용해 항목 정렬을 구현할 때 핵심은 한 요소를 DragSource 와 DropTarget 으로
+함께 설정하는 것임.
+이렇게 하면 사용자가 한 요소 위로 드래그할 때 hover 핸들러로 어떤 요소 위로 드래그하는지
+감지하고 위치를 바꿀 수 있음.
+Card 컴포넌트는 이미 DragSource 로 설정되 있고, 여기에다 다시 DropTarget 으로 설정해서
+드롭대상으로 작동할 때 필요한 collect 함수와 spec 속성을 추가하여, 다른 카드가 위로
+드래그 될 때 이를 감지하는 것은 List 컴포넌트의 cardDropSpect의 hover() 를 이용한 것과
+같은 방법을 이용함.
+updatePosition 콜백을 호출하여 두 카드의 위치를 서로 바꾸고, DropTarget 고차 컴포넌트를
+이용해 적절하게 Card 를 DropTarget 으로 내보냄.*/
+import { DragSource, DropTarget } from 'react-dnd';
+
+import constants from './zconstants';
 
 //...Custom propTypes 유효성 검사기.
 let ztitlePropType = (props, propName, componentName) => {
@@ -14,6 +35,38 @@ let ztitlePropType = (props, propName, componentName) => {
     }
   }
 };
+
+/*...S.160p.DragSource 로 설정할 Card 컴포넌트 사양에는 beginDrag() 만 구현함.
+카드를 다른 리스트 위로 드래그하는 동안 리스트를 바꾸므로 endDrag() 는 구현하지 않음.
+*/
+const cardDragSpec = {
+  beginDrag(props) {
+    return {
+      id: props.id
+    };
+  }
+}
+let collectDrag = (connect, monitor) => {
+  return {
+    connectDragSource: connect.dragSource()
+  };
+}
+//*...E.160p.DragSource 로 설정할 Card 컴포넌트 사양에는 beginDrag() 만 구현함.
+
+//...S.164p.Card 컴포넌트를 DragSource 와 DropTarget 으로 모두 설정함.
+const cardDropSpec = {
+  hover(props, monitor) {
+    const draggedId = monitor.getItem().id;
+    props.cardCallbacks.updatePosition(draggedId, props.id);
+  }
+}
+
+let collectDrop = (connect, monitor) => {
+  return {
+    connectDropTarget: connect.dropTarget(),
+  };
+}
+//...E.164p.Card 컴포넌트를 DragSource 와 DropTarget 으로 모두 설정함.
 
 
 /*
@@ -34,6 +87,12 @@ class Card extends Component {
   }//...E.toggleDetails()
 
   render() {
+/*.XXX.
+...160p.DragSource 로 설정할 Card 컴포넌트 사양에는 beginDrag() 만 구현함.
+const { connectDragSource } = this.props;
+...before/after: 164p.Card 컴포넌트를 DragSource 와 DropTarget 으로 모두 설정함.*/
+    const { connectDragSource, connectDropTarget } = this.props;
+
     let cardDetails;
 
     if(this.state.showDetails){
@@ -64,26 +123,39 @@ class Card extends Component {
       backgroundColor: this.props.color
     };//...E.sideColor.
 
-    return (
-      /*...Card 컴포넌트에 className 특성이 사용된 것에 주의할 것.
-      JSX는 자바스크립트이므로 class 같은 XML 특성이 있는 식별자와 구분하기 위함.*/
-      <div className="card">
-        <div style={sideColor}/>
+    //...S.164p.Card 컴포넌트를 DragSource 와 DropTarget 으로 모두 설정함.
+    return connectDropTarget(
+      //*...S.160p.DragSource 로 설정할 Card 컴포넌트 사양에는 beginDrag() 만 구현함.
+      connectDragSource(
+        /*...Card 컴포넌트에 className 특성이 사용된 것에 주의할 것.
+        JSX는 자바스크립트이므로 class 같은 XML 특성이 있는 식별자와 구분하기 위함.*/
+        <div className="card">
+          <div style={sideColor}/>
 
-{/*.XXX.
-        <div className="card__title"
-...before/after: 삼항식 조건에 따라 카드 제목에 className 을 다르게 넣음.*/}
-        <div className={this.state.showDetails? "card__title card__title--is--open"
-                                              : "card__title"}
-/*.XXX.
-             onClick={()=>this.setState({showDetails: !this.state.showDetails})}>
-...before/after: toggleDetails() */
-             onClick={this.toggleDetails.bind(this)}>
-          {this.props.title}
+  {/*.XXX.
+          <div className="card__title"
+  ...before/after: 삼항식 조건에 따라 카드 제목에 className 을 다르게 넣음.*/}
+          <div className={this.state.showDetails? "card__title card__title--is--open"
+                                                : "card__title"}
+  /*.XXX.
+               onClick={()=>this.setState({showDetails: !this.state.showDetails})}>
+  ...before/after: toggleDetails() */
+               onClick={this.toggleDetails.bind(this)}>
+              {this.props.title}
+          </div>
+          {/*...transitionEnterTimeout : ztoggle 을 클릭해서 펼때.
+            transitionLeaveTimeout : ztoggle 을 클릭해서 접을때. */}
+          <ReactCSSTransitionGroup transitionName="ztoggle"
+                                   transitionEnterTimeout={250}
+                                   transitionLeaveTimeout={950}>
+                                   {cardDetails}
+          </ReactCSSTransitionGroup>
         </div>
-        {cardDetails}
-      </div>
+      )
+      //*...E.160p.DragSource 로 설정할 Card 컴포넌트 사양에는 beginDrag() 만 구현함.
     );
+  //...E.164p.Card 컴포넌트를 DragSource 와 DropTarget 으로 모두 설정함.
+
   }
 }
 
@@ -94,7 +166,23 @@ Card.propTypes = {
   description: PropTypes.string,
   color: PropTypes.string,
   tasks: PropTypes.arrayOf(PropTypes.object),
-  taskCallbacks: PropTypes.object
+  taskCallbacks: PropTypes.object,
+  //...S.160p.DragSource 로 설정할 Card 컴포넌트 사양에는 beginDrag() 만 구현함.
+  cardCallbacks: PropTypes.object,
+  connectDragSource: PropTypes.func.isRequired,
+  //...E.160p.DragSource 로 설정할 Card 컴포넌트 사양에는 beginDrag() 만 구현함.
+  //...S.164p.Card 컴포넌트를 DragSource 와 DropTarget 으로 모두 설정함.
+  connectDropTarget: PropTypes.func.isRequired
+  //...E.164p.Card 컴포넌트를 DragSource 와 DropTarget 으로 모두 설정함.
 };
 
+
+/*.XXX.
 export default Card;
+.XXX.before/after: 160p.DragSource 로 설정할 Card 컴포넌트 사양에는
+                 beginDrag() 만 구현함
+export default DragSource(constants.CARD, cardDragSpec, collectDrag)(Card);
+...before/after: 164p.Card 컴포넌트를 DragSource 와 DropTarget 으로 모두 설정함.*/
+const dragSourceCard = DragSource(constants.CARD, cardDragSpec, collectDrag)(Card);
+const dragDropSortCard = DropTarget(constants.CARD, cardDropSpec, collectDrop)(dragSourceCard);
+export default dragDropSortCard;
