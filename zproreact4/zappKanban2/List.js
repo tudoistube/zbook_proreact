@@ -9,7 +9,7 @@ import { DropTarget } from 'react-dnd';
 import Card from './Card';
 import constants from './zconstants';
 
-//...S.162p.List 컴포넌트를 DropTarget 으로 설정함.
+//...S.161p.List 컴포넌트를 DropTarget 으로 설정함.
 const listTargetSpec = {
   hover(props, monitor) {
     const draggedId = monitor.getItem().id;
@@ -22,8 +22,7 @@ function collectDrop(connect, monitor) {
     connectDropTarget: connect.dropTarget()
   };
 }
-//...E.162p.List 컴포넌트를 DropTarget 으로 설정함.
-
+//...E.161p.List 컴포넌트를 DropTarget 으로 설정함.
 
 class List extends Component {
   render() {
@@ -31,19 +30,14 @@ class List extends Component {
     const { connectDropTarget } = this.props;
     //*...E.161p.List 컴포넌트를 DropTarget 으로 설정함.
 
-    let cards=this.props.cards.map((card)=>{
-/*.XXX.
+    let cards = this.props.cards.map((card) => {
+      /*
+      ...Card 컴포넌트로 속성을 전달하면서 타이핑을 줄이기 위해 스프레드 연산자 사용함.
+      */
       return <Card key={card.id}
-                   id={card.id}
-                   title={card.title}
-                   description={card.description}
-                   color={card.color} //...52p.
-                   tasks={card.tasks}/>
-...before/after : 스프레드 연산자 사용.*/
-      return <Card key={card.id}
-                  taskCallbacks={this.props.taskCallbacks}
-                  cardCallbacks={this.props.cardCallbacks} //...159p.added.
-                  {...card} />
+                   taskCallbacks={this.props.taskCallbacks}
+                   cardCallbacks={this.props.cardCallbacks}
+                   {...card} />
     });
 
     //...S.161p.List 컴포넌트를 DropTarget 으로 설정함.
@@ -55,17 +49,15 @@ class List extends Component {
     );
     //...E.161p.List 컴포넌트를 DropTarget 으로 설정함.
   }
-}
-
-List.propTypes={
+};
+List.propTypes = {
   title: PropTypes.string.isRequired,
   cards: PropTypes.arrayOf(PropTypes.object),
   taskCallbacks: PropTypes.object,
-  cardCallbacks: PropTypes.object,//...159p.added.
-  connectDropTarget: PropTypes.func.isRequired//...163p.added.
+  cardCallbacks: PropTypes.object,
+  connectDropTarget: PropTypes.func.isRequired
 };
 
-/*.XXX.
-export default List;
-...before/after: 161p.List 컴포넌트를 DropTarget 으로 설정함.*/
+//...S.161p.List 컴포넌트를 DropTarget 으로 설정함.
 export default DropTarget(constants.CARD, listTargetSpec, collectDrop)(List);
+//...E.161p.List 컴포넌트를 DropTarget 으로 설정함.
