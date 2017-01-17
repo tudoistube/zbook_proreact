@@ -6,6 +6,12 @@ import { DropTarget } from 'react-dnd';
 
 import zconstants from './zconstants';
 
+/*...show the name of dropped Snack on ShoppingCart.
+  snackNameInSpec 변수의 사용을 추적할 것.
+  ShoppingCart DND Spec :: 드래그 앤드 드랍 사양 :: drop() 메서드에서 monitor.getItem().name 으로 dropped Snack 의 이름을 얻음.
+  ShoppingCart 컴포넌트에 생성자를 추가하고 state 값으로 snackName 변수를 설정하고, 이 snackName 에 대한 setter() 를 생성함.
+  connectDropTarget 에서 canDrop && isOver 일때 snackNameInSpec 변수를 받아서 드랍한 스낵의 이름을 표현함.
+*/
 var snackNameInCart = '';
 var snackNameInSpec = '';
 

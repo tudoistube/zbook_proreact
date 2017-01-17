@@ -1,10 +1,10 @@
 #ProReact.js 책 실습중 의문사항  해결을 위해 만든 리포지터리 : Repository which has questions to be solved.  
-#[React.js 실습요약](https://drive.google.com/open?id=1OMe8x_2lzWWXuATZYFfDYoQO3Px8sPmDxu8BmAES6n8 "React.js Summary by tudoistube@gmail" )  
-##[gitHub on Pro-React book example, Kanban React.js App](https://github.com/pro-react/kanban-app "pro-react gitHub" )  
-###[gitHub on Pro-React book example, All Repoistories](https://github.com/pro-react/ "pro-react gitHub" )  
-###[gitHub on Pro-React book example, react-app-boilerplate](https://github.com/pro-react/react-app-boilerplate "pro-react gitHub" )  
-###[gitHub on Pro-React book example, React App Advanced Boilerplate](https://github.com/pro-react/react-app-advanced-boilerplate "pro-react gitHub" )  
-###[Pro-React book, Online Materials](http://www.pro-react.com/materials/ "pro-react Online Materials" )  
+
+###zappDnd : DragAndDrop which shows the name of dropped Snack  
+* snackNameInSpec 변수의 사용을 추적할 것.  
+  ShoppingCart DND Spec :: 드래그 앤드 드랍 사양 :: drop() 메서드에서 monitor.getItem().name 으로 dropped Snack 의 이름을 얻음.  
+  ShoppingCart 컴포넌트에 생성자를 추가하고 state 값으로 snackName 변수를 설정하고, 이 snackName 에 대한 setter() 를 생성함.  
+  connectDropTarget 에서 canDrop && isOver 일때 snackNameInSpec 변수를 받아서 드랍한 스낵의 이름을 표현함.  
 
 책 보면서 실습한 소스임.  
 공부하면서 올리는 것이어서 틀린 부분이 있을수도 있음(알려주시면 반영하겠음)  

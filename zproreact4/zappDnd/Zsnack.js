@@ -70,7 +70,7 @@ class Snack extends Component {
 }
 
 Snack.propTypes = {
-  name: PropTypes.string.isRequired,
+  connectDragSource: PropTypes.func.isRequired,
   isDragging: PropTypes.bool.isRequired, //...added.
   name: PropTypes.string.isRequired //...added.
 };
