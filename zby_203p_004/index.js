@@ -24,6 +24,7 @@ render((
       <Route path="/repos2" component={Repos2}>
         <Route path="/repos2/:repo_name" component={RepoDetails}/>{/*...added since 06.*/}
       </Route>
+      <Route path="/error" component={ServerError} />
     </Route>
   </Router>
 ), document.getElementById('root'))
